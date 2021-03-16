@@ -13,8 +13,8 @@ package homework;
 
 public class Task2 {
     public static void main(String[] args) {
-        long start;
-        long end ;
+        long start = 3;
+        long end = 5;
         long between;
         between = start < end ? end - start : -1;
         System.out.println(between);
