@@ -6,7 +6,7 @@ public class Task4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int randomNum = (int) ((Math.random() * 8)+1);
+        int randomNum = (int) ((Math.random() * 8) + 1);
         System.out.println("Введите число:");
 
         while (true) {
