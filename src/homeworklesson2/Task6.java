@@ -9,20 +9,35 @@ public class Task6 {
         System.out.println("Загадать число от 1 до 100!");
         int minNum = 1;
         int maxNum = 100;
-
+        int midNum;
 
         while (minNum <= maxNum) {
 
-            int midNum = 50;
-            System.out.println("Используйте числа 0 - НЕТ и 1 - ДА");
-            System.out.println("Число " + midNum + " больше загадонного?");
+            midNum = ((maxNum + minNum) / 2);
+
+            System.out.println("Вы загадали " + midNum + "? 0 - НЕТ и 1 - ДА");
+
             int userNumber = sc.nextInt();
 
-
             if (userNumber == 1) {
-                midNum = ((maxNum + minNum) / 2); // 150 / 2 = 75
-                System.out.println("Число " + midNum + " больше загадонного ?");
 
+                System.out.println("Загаданное число " + midNum);
+                break;
+
+            } else {
+
+                System.out.println("Загаданное число больше " + midNum + "? 0 - НЕТ и 1 - ДА");
+
+                userNumber = sc.nextInt();
+
+                if (userNumber == 0) {
+
+                    maxNum = midNum - 1;
+
+                } else if (userNumber == 1) {
+
+                    minNum = midNum + 1;
+                }
             }
         }
     }
