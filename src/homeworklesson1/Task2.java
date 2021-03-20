@@ -1,4 +1,4 @@
-package homeworkLesson1;
+package homeworklesson1;
 //1. Создание проекта, структура и настройки проекта.
 //
 //2. Задача на тернарный оператор
