@@ -17,11 +17,11 @@ public class Task5 {
             System.out.println(Arrays.toString(arr));
 
             if (arr[i] == 1) {
-                a += 1;
+                a = a + 1;
             } else if (arr[i] == 0) {
-                b += 1;
+                b = b + 1;
             } else if (arr[i] == -1) {
-                c += 1;
+                c = c + 1;
             }
         }
 
