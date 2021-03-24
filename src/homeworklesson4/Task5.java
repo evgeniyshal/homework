@@ -25,15 +25,16 @@ public class Task5 {
             }
         }
 
-        if (a > b && a > c)
+        if (a > b && a > c) {
             System.out.println("Число 1 встречается чаще ");
-        else if (b > a && b > c)
+        } else if (b > a && b > c) {
             System.out.println("Число 0 встречается чаще");
-        else if (c > a && c > b)
+        } else if (c > a && c > b) {
             System.out.println("Число -1 встречается чаще");
-        else;
-            }
-        }
+        } else ;
+    }
+}
+
 
 
 
