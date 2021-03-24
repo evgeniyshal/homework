@@ -1,6 +1,6 @@
 package homeworklesson4;
 
-import java.sql.Array;
+
 import java.util.Arrays;
 
 public class Task4 {
