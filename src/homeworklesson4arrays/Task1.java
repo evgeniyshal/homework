@@ -3,8 +3,8 @@ package homeworklesson4arrays;
 public class Task1 {
     public static void main(String[] args) {
         int [] arr = new int [20];
-        int min = (int) Double.MAX_VALUE;
-        int max = (int) Double.MIN_VALUE;
+        double min = Double.MAX_VALUE;
+        double max = Double.MIN_VALUE;
         int minIndex = 0;
         int maxIndex = 0;
         int replace;
