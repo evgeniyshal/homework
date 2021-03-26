@@ -1,4 +1,4 @@
-package homeworklesson4;
+package homeworklesson4arrays;
 
 
 import java.util.Arrays;
@@ -31,7 +31,7 @@ public class Task5 {
             System.out.println("Число 0 встречается чаще");
         } else if (c > a && c > b) {
             System.out.println("Число -1 встречается чаще");
-        } else ;
+        }
     }
 }
 

@@ -1,4 +1,4 @@
-package homeworklesson4;
+package homeworklesson4arrays;
 
 import java.util.Arrays;
 
@@ -22,10 +22,7 @@ public class Task3 {
             if (arr[i] < 0) {
                 disArr[disPos] = arr[i];
                 disPos++;
-            } else {
-
             }
-
         }
         System.out.println(Arrays.toString(disArr));
     }

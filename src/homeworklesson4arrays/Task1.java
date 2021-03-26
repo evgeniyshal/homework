@@ -1,6 +1,4 @@
-package homeworklesson4;
-
-import java.util.Arrays;
+package homeworklesson4arrays;
 
 public class Task1 {
     public static void main(String[] args) {
@@ -16,11 +14,11 @@ public class Task1 {
 
             if (arr[i] < min) {
                 min = arr[i];
-                minIndex = i;
+                maxIndex = i;
             }
             if (arr[i] > max) {
                 max = arr[i];
-                maxIndex = i;
+                minIndex = i;
             }
         }
             replace = minIndex;
