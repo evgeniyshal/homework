@@ -15,14 +15,19 @@ public class Task1 {
 
         Scanner in = new Scanner(System.in);
         String[] arr = new String[5];
-        String userWord = in.nextLine();
 
-        for (int i = 0; i < arr.length; i++) {
-            if (!userWord.equals(arr[i])) {
-
+        while (true) {
+            String userWord = in.nextLine();
+            if ("exit".equals(userWord)) break;
+            for (int i = 0; i < arr.length; i++) {
+                if (!userWord.equals(arr[i])) {
+                    arr[i] = userWord;
+                    break;
+                }
             }
-
         }
+
+
 
         System.out.println(Arrays.toString(arr));
     }
