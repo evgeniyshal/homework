@@ -7,6 +7,7 @@ public class Cat {
     private String color;
     private Mouse[] miceMass;
     private int count;
+
     public Mouse[] getMiceMass() {
         return miceMass;
     }
@@ -21,7 +22,6 @@ public class Cat {
 
         } else if (count == 100) {
             System.out.println("Массив мышей переполнен"); // эксепшн кидать не стал.
-            return;
 
         } else {
             for (int i = 0; i < miceMass.length; i++) {
@@ -31,7 +31,6 @@ public class Cat {
                     break;
                 }
             }
-
         }
     }
     public void catFight(Cat anotherCat) {
