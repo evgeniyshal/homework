@@ -1,41 +1,39 @@
 package homeworklesson6.storage;
 
+import java.util.Arrays;
+
 public class Book {
     private String title;
     private Author author;
     private int page;
     private int publishingYear;
 
-
-    public Author getAuthor() {
-        return author;
+    public Book(String title, int pages, int publishingYear, Author... authors) {
+        setTitle(title);
+        setPages(pages);
+        setPublishingYear(publishingYear);
+        setAuthors(authors);
     }
-    public void setAuthor(Author author) {
-        if (author == null) {
-            throw new IllegalArgumentException("Это не имя автора");
+
+    private void setAuthors(Author[] authors) {
+        if (title == null) {
+            throw new IllegalArgumentException("Это не автор");
         }
-        this.author = author;
+        this.authors = authors;
     }
 
-    public String getTitle() {
-        return title;
-    }
-    public void setTitle(String title) {
+    private void setTitle(String title) {
         if (title == null) {
             throw new IllegalArgumentException("Это не название Книги");
         }
         this.title = title;
     }
 
-    public int getPage() {
-        return page;
-    }
-
-    public void setPage(int page) {
-        if(page <= 0 ) {
+    private void setPages(int pages) {
+        if (pages <= 0) {
             throw new IllegalArgumentException("Неверный номер страницы");
         }
-        this.page = page;
+        this.pages = pages;
     }
 
     public int getPublishingYear() {

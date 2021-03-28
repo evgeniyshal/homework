@@ -9,16 +9,8 @@ public class Author {
         setSoName(soName);
     }
 
-    public String getName() {
-        return name;
-    }
-    public String getSoName () {
-        return soName;
-    }
-
-
-    public void setName(String name) {
-        if (name == null || !name.trim().contains("0")) { // проверка на null, удаления пробелов, проверка на содержание
+    private void setName(String name) {
+        if (name == null || !(name.trim().length() > 1)) {
             throw new IllegalArgumentException("Это не имя Автора");
         }
             this.name = name;

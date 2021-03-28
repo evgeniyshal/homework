@@ -16,6 +16,17 @@ public class Main {
         Author author5 = new Author("Аркадий", "Стругацкий");
         Author author6 = new Author("Борис", "Стругайцкий");
 
+        Book picnic = new Book("Пикник на обочине", 600, 1990, author5, author6);
+        Book chairs12 = new Book("Двенадцать стульев", 353,1910, author1, author2);
+        Book tales = new Book("Сказки братьев Гримм", 700, 1800, author3, author4);
+
+        Storage storage = new Storage(20);
+
+        storage.addBook(picnic);
+        storage.addBook(chairs12);
+        storage.addBook(tales);
+
+        System.out.println(Arrays.toString(storage.getBooks()));
 
         /*Хранилище: книги, номер хранилища;
 
