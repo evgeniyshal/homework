@@ -1,4 +1,4 @@
-package homeworklesson6.storage;
+package homework.lesson6.storage;
 
 import java.util.UUID;
 

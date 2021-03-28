@@ -1,4 +1,4 @@
-package homeworklesson5strings;
+package homework.lesson5;
 
 public class Task2 {
    /* 2. Найти количество вхождений одной строки в другую.

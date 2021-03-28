@@ -1,4 +1,4 @@
-package homeworklesson5strings;
+package homework.lesson5;
 
 public class Task3 {
     /*3. Написать функцию, которая проверяет, является ли строка палиндромом.
