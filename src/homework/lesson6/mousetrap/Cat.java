@@ -6,7 +6,7 @@ public class Cat {
     private String name;
     private String color;
     private Mouse[] miceMass;
-
+    private int count;
     public Mouse[] getMiceMass() {
         return miceMass;
     }
@@ -19,14 +19,19 @@ public class Cat {
         if ( speed < mouse.getSpeed()) {
             System.out.println("Мышь убежала");
 
+        } else if (count == 100) {
+            System.out.println("Массив мышей переполнен"); // эксепшн кидать не стал.
+            return;
+
         } else {
             for (int i = 0; i < miceMass.length; i++) {
                 if( miceMass[i] == null) {
                     miceMass[i] = mouse;
-                    return;
+                    count++;
+                    break;
                 }
             }
-            System.out.println("Массив мышей переполнен"); // эксепшн кидать не стал.
+
         }
     }
     public void catFight(Cat anotherCat) {
