@@ -1,13 +1,9 @@
-package homeworklesson6.storage;
+package homework.lesson6.storage;
 
-import com.sun.source.doctree.AuthorTree;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Book tales = new Book();
-        Book chairs12 = new Book();
-        Book picnic = new Book();
-
 
         Author author1 = new Author("Илья", "Ильф");
         Author author2 = new Author("Евгений","Петров");

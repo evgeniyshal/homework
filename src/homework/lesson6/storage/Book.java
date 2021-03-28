@@ -1,11 +1,11 @@
-package homeworklesson6.storage;
+package homework.lesson6.storage;
 
 import java.util.Arrays;
 
 public class Book {
     private String title;
-    private Author author;
-    private int page;
+    private Author[] authors;
+    private int pages;
     private int publishingYear;
 
     public Book(String title, int pages, int publishingYear, Author... authors) {
@@ -36,20 +36,20 @@ public class Book {
         this.pages = pages;
     }
 
-    public int getPublishingYear() {
-        return publishingYear;
-    }
-
-    public void setPublishingYear(int publishingYear) {
+    private void setPublishingYear(int publishingYear) {
         if (publishingYear <= 0){
             throw new IllegalArgumentException("Неверный год публикации");
         }
         this.publishingYear = publishingYear;
     }
 
-
-
-
-
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", authors=" + Arrays.toString(authors) +
+                ", pages=" + pages +
+                ", publishingYear=" + publishingYear +
+                '}';
+    }
 }
-
