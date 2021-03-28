@@ -11,14 +11,14 @@ public class Author {
 
     private void setName(String name) {
         if (name == null || !(name.trim().length() > 1)) {
-            throw new IllegalArgumentException("Это не имя Автора");
+            throw new IllegalArgumentException("Это не имя автора книги");
         }
         this.name = name;
     }
 
     private void setSurname (String surname){
         if (surname== null || !(surname.trim().length() > 1)) {
-            throw new IllegalArgumentException("Это не фамилия Автора");
+            throw new IllegalArgumentException("Это не фамилия автора книги");
         }
         this.surname = surname;
     }

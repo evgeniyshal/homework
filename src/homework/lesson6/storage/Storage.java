@@ -22,7 +22,7 @@ public class Storage {
                 return;
             }
         }
-        throw new IndexOutOfBoundsException("В хранилище нет места");
+        throw new IndexOutOfBoundsException("В хранилище нет места.");
     }
 
     public Book[] getBooks() {

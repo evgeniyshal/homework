@@ -31,14 +31,14 @@ public class Book {
 
     private void setPages(int pages) {
         if (pages <= 0) {
-            throw new IllegalArgumentException("Неверный номер страницы");
+            throw new IllegalArgumentException("Неверный номер страницы книги");
         }
         this.pages = pages;
     }
 
     private void setPublishingYear(int publishingYear) {
         if (publishingYear <= 0){
-            throw new IllegalArgumentException("Неверный год публикации");
+            throw new IllegalArgumentException("Неверный год публикации книги");
         }
         this.publishingYear = publishingYear;
     }
