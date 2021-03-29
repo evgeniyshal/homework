@@ -1,11 +1,13 @@
 package homework.lesson6.mousetrap;
 
+import java.util.Arrays;
+
 public class Cat {
     private int speed = (int)(Math.random() * 24) + 1;
     private int weight = (int)(Math.random() * 9) + 1;
     private String name;
     private String color;
-    private Mouse[] miceMass;
+    private Mouse[] miceMass = new Mouse[100];
     private int count;
 
     public Mouse[] getMiceMass() {
@@ -14,6 +16,10 @@ public class Cat {
 
     public int getWeight() {
         return weight;
+    }
+    public void resetMice() {
+        Arrays.fill(miceMass, null);
+        count = 0;
     }
 
     public void catchMouse (Mouse mouse) {
@@ -40,6 +46,6 @@ public class Cat {
                     catchMouse(anotherCat.getMiceMass()[i]);
                 }
             }
-        }
+        } anotherCat.resetMice();
     }
 }
