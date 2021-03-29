@@ -3,11 +3,8 @@ package homework.lesson6.mousetrap;
 public class Main {
     public static void main(String[] args) {
         Mouse mouse = new Mouse();
-
         Cat cat = new Cat();
-
         Cat anotherCat = new Cat();
-
     }
 }
 /*
