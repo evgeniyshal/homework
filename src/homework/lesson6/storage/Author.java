@@ -1,8 +1,16 @@
 package homework.lesson6.storage;
 
 public class Author {
-    private String name;
+    private String name; // закрыты от использования.
     private String surname;
+
+    public String getName() { // getter это отдача информации
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
 
     public Author(String name, String soName) {
         setName(name);

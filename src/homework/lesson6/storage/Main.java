@@ -23,6 +23,7 @@ public class Main {
         storage.addBook(tales);
 
         System.out.println(Arrays.toString(storage.getBooks()));
+        System.out.println(author6);
 
         /*Хранилище: книги, номер хранилища;
 

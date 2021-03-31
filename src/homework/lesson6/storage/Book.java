@@ -8,6 +8,18 @@ public class Book {
     private int pages;
     private int publishingYear;
 
+    public String getTitle() {
+        return title;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public int getPublishingYear() {
+        return publishingYear;
+    }
+
     public Book(String title, int pages, int publishingYear, Author... authors) {
         setTitle(title);
         setPages(pages);

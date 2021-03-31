@@ -10,6 +10,30 @@ public class Cat {
     private Mouse[] miceMass = new Mouse[100];
     private int count;
 
+    public Cat() {
+        name = catNames[(int) (Math.random() * catNames.length)];
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public Mouse[] getMiceMass() {
         return miceMass;
     }
