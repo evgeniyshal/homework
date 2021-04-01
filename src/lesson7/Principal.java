@@ -6,7 +6,7 @@ public class Principal extends SchoolPerson {
         super(name, age);
     }
 
-    Principal principal = new Principal("Директор", 65);
+
 
     public void startLesson () {
         System.out.println("Звонок. Начало занятий");

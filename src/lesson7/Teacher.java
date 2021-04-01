@@ -1,8 +1,11 @@
 package lesson7;
 
 
-public class Teacher implements Teachable {
+ public class Teacher implements Teachable {
     String subject;
+    public Teacher(String name, int age) {
+        super(name,age);
+    }
 
 
     @Override
