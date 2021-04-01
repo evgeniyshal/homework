@@ -2,14 +2,14 @@ package lesson7;
 
 public class Student extends SchoolPerson, implements Educable {
 
-    private String subjectMath;
+    private String subject = "Математика";
     int knowledgeLevelCount = 0;
 
     public Student(String name, int age) {
         super(name, age);
     }
 
-    public int getKnowledgeLevelCount() {
+    private int getKnowledgeLevelCount() {
         return knowledgeLevelCount;
     }
 }

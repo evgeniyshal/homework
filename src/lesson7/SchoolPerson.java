@@ -3,8 +3,7 @@ package lesson7;
 public class SchoolPerson {
     private String name;
     private int age;
-    private Teacher[] teachers;
-    private String [] students;
+
 
     public SchoolPerson(String name, int age) {
         setName(name);

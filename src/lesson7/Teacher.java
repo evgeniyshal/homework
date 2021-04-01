@@ -1,18 +1,16 @@
 package lesson7;
 
+
 public class Teacher implements Teachable {
-    String subjectMath;
-
-
-
+    String subject;
 
 
     @Override
-    public void toTeach() {
-
-        System.out.println();
+    public void toTeach(Student student) {
+        student.toStudy();
     }
 }
+
  /*Класс Учитель
         создается со следующими харатеристиками:
         имя (тип String)

@@ -8,8 +8,12 @@ public class Principal extends SchoolPerson {
 
     Principal principal = new Principal("Директор", 65);
 
-
-
+    public void startLesson () {
+        System.out.println("Звонок. Начало занятий");
+    }
+    public void endLesson () {
+        System.out.println("Звонок. Конец занятий");
+    }
 
 
 }
