@@ -1,8 +1,15 @@
 package lesson7;
 
-public class HeadTeacher {
-    private String name;
-    private int age;
+public class Principal extends SchoolPerson {
+
+    public Principal(String name, int age) {
+        super(name, age);
+    }
+
+    Principal principal = new Principal("Директор", 65);
+
+
+
 
 
 }

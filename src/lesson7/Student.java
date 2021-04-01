@@ -1,21 +1,16 @@
 package lesson7;
 
-public class Student extends HeadTeacher implements Educable {
-    private String subject;
+public class Student extends SchoolPerson, implements Educable {
 
+    private String subjectMath;
     int knowledgeLevelCount = 0;
+
+    public Student(String name, int age) {
+        super(name, age);
+    }
 
     public int getKnowledgeLevelCount() {
         return knowledgeLevelCount;
-    }
-
-    public void setKnowledgeLevelCount(int knowledgeLevelCount) {
-        this.knowledgeLevelCount = knowledgeLevelCount;
-    }
-
-    @Override
-    public void toStudy() {
-
     }
 }
 /*Класс Ученик

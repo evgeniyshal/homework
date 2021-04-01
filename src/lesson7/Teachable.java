@@ -1,5 +1,6 @@
 package lesson7;
 
-public interface Teachers {
+public interface Teachable {
+
     void toTeach();
 }

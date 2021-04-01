@@ -1,7 +1,8 @@
 package lesson7;
 
-public class Teacher extends HeadTeacher implements Teachers {
-    String subject;
+public class Teacher implements Teachable {
+    String subjectMath;
+
 
 
 
@@ -9,6 +10,7 @@ public class Teacher extends HeadTeacher implements Teachers {
     @Override
     public void toTeach() {
 
+        System.out.println();
     }
 }
  /*Класс Учитель
