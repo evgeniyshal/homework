@@ -2,6 +2,7 @@ package lesson7;
 
 public class Main {
     public static void main(String[] args) {
+
         Student student1 = new Student("Александр",7);
         Student student2 = new Student("Алексей",8);
         Student student3 = new Student("Александр",9);
@@ -9,7 +10,6 @@ public class Main {
         Teacher teacher = new Teacher("Мария Ивановна",35);
         Principal principal = new Principal("Сан Саныч", 45);
 
-        System.out.println(principal);
     }
 }
 /*

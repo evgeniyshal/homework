@@ -2,5 +2,5 @@ package lesson7;
 
 public interface Teachable {
 
-    void toTeach();
+    void toTeach(Student student);
 }
