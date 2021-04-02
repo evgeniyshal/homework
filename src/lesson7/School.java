@@ -2,14 +2,18 @@ package lesson7;
 
 public class School {
     private final String name = "High School";
-    private Teacher[] teachers;
-    private String [] students;
 
-    public void dayPass(Principal principal) {
+    private Teacher[] teachers = new Teacher[1];
+    private Student[] students = new Student[3];
+
+
+    public void dayPass(Principal principal,Teacher teacher) {
         principal.startLesson();
-
+        teacher.toTeach();
         principal.endLesson();
+
     }
+
 
     /*  Класс Школа
     создается со следующими харатеристиками:

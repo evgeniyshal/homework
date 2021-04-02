@@ -7,7 +7,9 @@ public class Main {
         Student student3 = new Student("Александр",9);
 
         Teacher teacher = new Teacher("Мария Ивановна",35);
+        Principal principal = new Principal("Сан Саныч", 45);
 
+        System.out.println(principal);
     }
 }
 /*
