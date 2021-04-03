@@ -33,13 +33,14 @@ public class School {
                     }
                 }
             }
-        } principal.endLesson();
+        }
+        principal.endLesson();
     }
 }
 
           /* }principal.endLesson();
 
-        principal.startLesson();
+       principal.startLesson();
         for (Teacher teacher : teachers) {
             if (teacher != null) {
                 for (Student student : students) {
