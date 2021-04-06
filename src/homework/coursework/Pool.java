@@ -1,5 +1,5 @@
 package homework.coursework;
 
-public class Pool {
-    FitnessMember[] pool = new FitnessMember[20];
+public class Pool extends FitnessClub {
+    Member[] pool = new Member[20];
 }
