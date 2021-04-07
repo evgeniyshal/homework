@@ -3,15 +3,18 @@ package homework.coursework;
 
 
 public class Member { // Клиент
-    String name;
-    String surname;
-    int birthday;
+    private String name;
+    private String surname;
+    private int birthday;
+    private MembershipType membership;
 
-    public Member(String name, String surname, int birthday) {
+    public Member(String name, String surname, int birthday, MembershipType membership) {
         this.name = name;
         this.surname = surname;
         this.birthday = birthday;
+        this.membership = membership;
     }
+
 
     public String getName() {
         return name;
