@@ -2,14 +2,13 @@ package homework.coursework;
 
 public class Main {
     public static void main(String[] args) {
-        Member member1 = new Member("Антон", "Алексеев",19, MembershipType.ONE_TIME);
+        Member member1 = new Member("Антон", "Алексеев", 19, MembershipType.ONE_TIME);
         Member member2 = new Member("Алексей", "Иванов",25, MembershipType.DAY_TIME);
         Member member3 = new Member("Андрей", "Петров",30, MembershipType.FULL_TIME);
 
         GroupLessons groupLessons = new GroupLessons();
         Gym gym = new Gym();
         Pool pool = new Pool();
-
     }
 }
 /*Задача «Фитнес»

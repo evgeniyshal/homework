@@ -10,4 +10,5 @@ public class FitnessClub {
     public Membership getMembership() {
         return membership;
     }
+
 }
