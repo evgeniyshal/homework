@@ -2,13 +2,12 @@ package homework.coursework;
 
 
 
-public class Member { // Клиент
+public class MemberInfo { // Клиент info
     private String name;
     private String surname;
     private int birthday;
-    private MembershipType membership;
 
-    public Member(String name, String surname, int birthday, MembershipType membership) {
+    public MemberInfo(String name, String surname, int birthday) {
         this.name = name;
         this.surname = surname;
         this.birthday = birthday;

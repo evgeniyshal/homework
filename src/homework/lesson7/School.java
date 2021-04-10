@@ -45,7 +45,7 @@ public class School {
             if (teacher != null) {
                 for (Student student : students) {
                     if (student != null && teacher.getSubject().equals(student.getSubject())) {
-                            teacher.toTeach(student);
+                            teacher.toTeach(student);*/
 
 
 
