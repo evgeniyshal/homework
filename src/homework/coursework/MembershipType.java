@@ -11,6 +11,10 @@ public enum MembershipType {
         this.timeRange = timeRange;
     }
 
+    public boolean membershipCheck(String zone) {
+        return false;
+    }
+
     public TimeRange getTimeRange() {
         return timeRange;
     }

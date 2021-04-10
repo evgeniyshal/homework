@@ -16,43 +16,12 @@ public class FitnessClub {
             return;
         }
 
-        switch (membership.getMembershipType()) {
-            case ONE_TIME:
-                if ("pool".equals(zone)) {
-                   add(membership, pool);
-                } else if ("gym".equals(zone)) {
-                    add(membership, gym);
-                } else {
-                    System.out.println("Ваш тип абонемента не позволяет посещать эту зону");
-                }
-                break;
-            case DAY_TIME:
-                if ("gym".equals(zone)) {
-                    add(membership, gym);
-                } else if ("group".equals(zone)) {
-                    add(membership, groupLessons);
-                } else {
-                    System.out.println("Ваш тип абонемента не позволяет посещать эту зону");
-                }
-                break;
-            case FULL_TIME:
-                if ("gym".equals(zone)) {
-                    add(membership, gym);
-                } else if ("group".equals(zone)) {
-                    add(membership, groupLessons);
-                } else if ("pool".equals(zone)) {
-                    add(membership, pool);
-                }
-                break;
-        }
-    }
-
-    private void add(Membership membership, Fitness fitness) {
-        if (membership.getMembershipType().getTimeRange().inRange(LocalTime.now())) {
-            fitness.addMembership(membership);
-        } else {
-            System.out.println("Сейчас " + LocalTime.now() +
-                    ", вы не можете посещать эту зону в это время");
+        if (membership.getMembershipType().membershipCheck(zone) && "gym".equals(zone)) {
+            gym.addMembership(membership);
+        } else if (membership.getMembershipType().membershipCheck(zone) && "pool".equals(zone)) {
+            pool.addMembership(membership);
+        } else if (membership.getMembershipType().membershipCheck(zone) && "group".equals(zone)) {
+            groupLessons.addMembership(membership);
         }
     }
 }
