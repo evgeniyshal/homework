@@ -11,9 +11,7 @@ public class MemberInfo { // Клиент info
         this.name = name;
         this.surname = surname;
         this.birthday = birthday;
-        this.membership = membership;
     }
-
 
     public String getName() {
         return name;

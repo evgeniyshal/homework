@@ -5,6 +5,8 @@ public class Main {
         Mouse mouse = new Mouse();
         Cat cat = new Cat();
         Cat anotherCat = new Cat();
+
+        System.out.println(cat.getName());
     }
 }
 /*

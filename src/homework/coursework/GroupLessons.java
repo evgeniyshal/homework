@@ -1,6 +1,5 @@
 package homework.coursework;
 
-public class GroupLessons extends FitnessClub { // Занятия
+public class GroupLessons extends Fitness{ // Занятия
 
-    Member[] groupLess = new Member[20];
 }

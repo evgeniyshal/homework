@@ -1,9 +1,58 @@
 package homework.coursework;
 
+import java.time.LocalTime;
+
 public enum MembershipType {
-    ONE_TIME(new TimeRange("08:00", "22:00")),
-    DAY_TIME(new TimeRange("08:00", "16:00")),
-    FULL_TIME(new TimeRange("08:00", "22:00"));
+    ONE_TIME(new TimeRange("08:00", "22:00")) {
+        @Override
+        public boolean membershipCheck(String zone) {
+            if(!getTimeRange().inRange(LocalTime.now())) {
+                System.out.println("Сейчас " + LocalTime.now() + ", вы не можете посещать эту зону в это время");
+                return false;
+            } else {
+                if ("pool".equals(zone) || "gym".equals(zone)) { // способ избежать NullPointerException если в переменной zone пришел null
+                    return true;
+                } else {
+                    System.out.println("Ваш тип абонемента не позволяет посещать эту зону");
+                    return false;
+                }
+            } //TODO Реализовать проверку - не находится ли данный абонемент в одной из зон
+        }
+    },
+
+    DAY_TIME(new TimeRange("08:00", "16:00")) {
+        @Override
+        public boolean membershipCheck(String zone) {
+            if(!getTimeRange().inRange(LocalTime.now())) {
+                System.out.println("Сейчас " + LocalTime.now() + ", вы не можете посещать эту зону в это время");
+                return false;
+            } else {
+                if ("gym".equals(zone) || "group".equals(zone)) {
+                    return true;
+                } else {
+                    System.out.println("Ваш тип абонемента не позволяет посещать эту зону");
+                    return false;
+                }
+            }
+        }
+    },
+
+    FULL_TIME(new TimeRange("08:00", "22:00")) {
+        @Override
+        public boolean membershipCheck(String zone) {
+            if (!getTimeRange().inRange(LocalTime.now())) {
+                System.out.println("Сейчас " + LocalTime.now() + ", вы не можете посещать эту зону в это время");
+                return false;
+            } else {
+                if ("gym".equals(zone) || "group".equals(zone) || "pool".equals(zone)) {
+                    return true;
+                } else {
+                    System.out.println("Ваш тип абонемента не позволяет посещать эту зону");
+                    return false;
+                }
+            }
+        }
+    };
 
     private TimeRange timeRange;
 

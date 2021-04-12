@@ -1,14 +1,29 @@
 package homework.coursework;
 
+import java.time.LocalDateTime;
+import java.time.Month;
+
 public class Main {
     public static void main(String[] args) {
-        Member member1 = new Member("Антон", "Алексеев", 19, MembershipType.ONE_TIME);
-        Member member2 = new Member("Алексей", "Иванов",25, MembershipType.DAY_TIME);
-        Member member3 = new Member("Андрей", "Петров",30, MembershipType.FULL_TIME);
+        MemberInfo memberInfo1 = new MemberInfo("Антон", "Алексеев", 19);
+        Membership membership1 = new Membership(MembershipType.ONE_TIME,
+                LocalDateTime.of(2020, Month.OCTOBER, 15, 11, 22), memberInfo1);
 
-        GroupLessons groupLessons = new GroupLessons();
-        Gym gym = new Gym();
-        Pool pool = new Pool();
+
+        MemberInfo memberInfo2 = new MemberInfo("Алексей", "Иванов",25);
+        Membership membership2 = new Membership(MembershipType.DAY_TIME,
+                LocalDateTime.of(2020, Month.JULY, 30, 14, 22), memberInfo2);
+
+        MemberInfo memberInfo3 = new MemberInfo("Андрей", "Петров",30);
+        Membership membership3 = new Membership(MembershipType.FULL_TIME,
+                LocalDateTime.of(2020, Month.JANUARY, 16, 18, 31), memberInfo3);
+
+        FitnessClub fitnessClub = new FitnessClub();
+
+        fitnessClub.membershipCheck(membership1, "gym");
+        fitnessClub.membershipCheck(membership2, "pool");
+        fitnessClub.membershipCheck(membership3, "group");
+
     }
 }
 /*Задача «Фитнес»

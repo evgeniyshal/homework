@@ -1,4 +1,4 @@
-package lesson7;
+package homework.lesson7;
 
 
  public class Teacher extends SchoolPerson implements Teachable {

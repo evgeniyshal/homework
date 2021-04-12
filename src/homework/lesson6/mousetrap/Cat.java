@@ -3,11 +3,15 @@ package homework.lesson6.mousetrap;
 import java.util.Arrays;
 
 public class Cat {
-    private int speed = (int)(Math.random() * 24) + 1;
-    private int weight = (int)(Math.random() * 9) + 1;
+
+    private static final String[] catNames =
+            new String[] {"Тема", "Тиша", "Ася", "Барсик", "Вонючка", "Хлебушек", "Сырок"};
+
+    private final int speed = (int)(Math.random() * 24) + 1;
+    private final int weight = (int)(Math.random() * 9) + 1;
     private String name;
     private String color;
-    private Mouse[] miceMass = new Mouse[100];
+    private final Mouse[] miceMass = new Mouse[100];
     private int count;
 
     public Cat() {
@@ -63,13 +67,15 @@ public class Cat {
             }
         }
     }
+
     public void catFight(Cat anotherCat) {
-        if (this.weight > anotherCat.getWeight()) {
+        if (this.weight > anotherCat.getWeight() && anotherCat.getCount() > 0) {
             for (int i = 0; i < getMiceMass().length; i++) {
                 if(anotherCat.getMiceMass()[i] != null ) {
                     catchMouse(anotherCat.getMiceMass()[i]);
                 }
             }
-        } anotherCat.resetMice();
+           anotherCat.resetMice();
+        }
     }
 }
