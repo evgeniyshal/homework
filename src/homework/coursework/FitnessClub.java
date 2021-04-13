@@ -4,12 +4,16 @@ import java.time.LocalDateTime;
 
 public class FitnessClub {
 
-    private Gym gym = new Gym();
-    private Pool pool = new Pool();
-    private GroupLessons groupLessons = new GroupLessons();
+
+    Membership[] gym = new Membership[20];
+    Membership[] pool = new Membership[20];
+    Membership[] groupLessons = new Membership[20];
 
     public void membershipCheck(Membership membership, String zone) {
         //TODO Реализовать проверку - не находится ли данный абонемент в одной из зон
+        // TODO дописать зоны, сделать объект фитнес добавлять метод  add
+
+
         if (membership.getExpireDate().isBefore(LocalDateTime.now())) {
             System.out.println("Ваш абонемент просрочен");
             return;
