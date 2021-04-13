@@ -10,10 +10,6 @@ public class FitnessClub {
     Membership[] groupLessons = new Membership[20];
 
     public void membershipCheck(Membership membership, String zone) {
-        //TODO Реализовать проверку - не находится ли данный абонемент в одной из зон
-        // TODO дописать зоны, сделать объект фитнес добавлять метод  add
-
-
         if (membership.getExpireDate().isBefore(LocalDateTime.now())) {
             System.out.println("Ваш абонемент просрочен");
             return;
