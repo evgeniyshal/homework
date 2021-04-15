@@ -58,7 +58,7 @@ public class Employee {
 
         // добавление num объектов Employee в список (employees)
         for (int i = 0; i < num; i++) {
-            employees.add(new Employee(   )); // TODO: объекты создавать с рандомными значениями. Возраст от 21 до 60 и не забудьте про зп
+           // employees.add(new Employee(   )); // TODO: объекты создавать с рандомными значениями. Возраст от 21 до 60 и не забудьте про зп
         }
         return employees;
     }
