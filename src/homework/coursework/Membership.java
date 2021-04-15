@@ -1,6 +1,7 @@
 package homework.coursework;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class Membership { // Абонимент в тренажерный зал
 
@@ -18,6 +19,14 @@ public class Membership { // Абонимент в тренажерный зал
 
     public MembershipType getMembershipType(){
         return membershipType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Membership)) return false;
+        Membership that = (Membership) o;
+        return membershipType == that.membershipType && Objects.equals(registerDate, that.registerDate) && Objects.equals(expireDate, that.expireDate) && Objects.equals(memberInfo, that.memberInfo);
     }
 
     public LocalDateTime getExpireDate() {

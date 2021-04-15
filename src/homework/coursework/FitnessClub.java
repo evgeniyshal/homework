@@ -1,13 +1,9 @@
 package homework.coursework;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 public class FitnessClub {
 
-    //TODO добавить метод add (абонмент и желаемую зону)
-    //TODO реализовать добавление масиив
-    //TODO дописать проверку по времени
     Membership[] gym = new Membership[20];
     Membership[] pool = new Membership[20];
     Membership[] groupLessons = new Membership[20];
@@ -20,7 +16,11 @@ public class FitnessClub {
 
         if (membership.getMembershipType().membershipCheck(zone)) {
             System.out.println("Проходите");
-            addMembership(membership, zone);
+            if(!isInZoneCheck(gym, membership) && !isInZoneCheck(pool, membership)  && !isInZoneCheck(groupLessons,membership)) {
+                addMembership(membership, zone);
+            } else {
+                System.out.println("Ваш абонимент зарегистрирован в другой зоне");
+            }
         }
     }
 
@@ -45,5 +45,16 @@ public class FitnessClub {
             }
         }
     }
+
+    private boolean isInZoneCheck(Membership[] memberships, Membership membership) {
+        for (int i = 0; i < memberships.length; i++) {
+            if(membership.equals(memberships[i])) {
+
+            }
+        }
+        return true;
+    }
 }
+
+
 
