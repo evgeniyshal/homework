@@ -12,7 +12,7 @@ public class FitnessClub {
     Membership[] pool = new Membership[20];
     Membership[] groupLessons = new Membership[20];
 
-    public void membershipCheck(Membership membership, String zone) { // Проверка
+    public void membershipCheck(Membership membership, String zone) { // Проверка по времени вложена сюда
         if (membership.getExpireDate().isBefore(LocalDateTime.now())) {
             System.out.println("Ваш абонемент просрочен");
             return;
@@ -22,10 +22,9 @@ public class FitnessClub {
             System.out.println("Проходите");
             addMembership(membership, zone);
         }
-
-
     }
-    public void addMembership(Membership membership, String zone){ // добавление абонимента
+
+    public void addMembership(Membership membership, String zone) { // добавление абонимента
         if ("gym".equals(zone)) {
             for (int i = 0; i < gym.length; i++) {
                 if (gym[i] == null) {
@@ -43,6 +42,7 @@ public class FitnessClub {
                 if (groupLessons[i] == null) {
                     groupLessons[i] = membership;
                 }
+            }
         }
     }
 }
