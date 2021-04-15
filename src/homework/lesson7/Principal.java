@@ -1,6 +1,7 @@
 package homework.lesson7;
 
-public class Principal extends SchoolPerson {
+public class
+Principal extends SchoolPerson {
 
     public Principal(String name, int age) {
         super(name, age);

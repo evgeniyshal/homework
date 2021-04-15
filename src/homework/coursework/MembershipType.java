@@ -19,7 +19,6 @@ public enum MembershipType {
             }
         }
     },
-
     DAY_TIME(new TimeRange("08:00", "16:00")) {
         @Override
         public boolean membershipCheck(String zone) {
@@ -36,8 +35,8 @@ public enum MembershipType {
             }
         }
     },
-
     FULL_TIME(new TimeRange("08:00", "22:00")) {
+
         @Override
         public boolean membershipCheck(String zone) {
             if (!getTimeRange().inRange(LocalTime.now())) {
