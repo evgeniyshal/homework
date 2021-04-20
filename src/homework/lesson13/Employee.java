@@ -2,8 +2,9 @@ package homework.lesson13;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
-public class Employee {
+public class Employee  implements Comparable<Employee>{
     private String name;
     private String company;
     private int salary;
@@ -47,7 +48,11 @@ public class Employee {
     public void setAge(int age) {
         this.age = age;
     }
-    // TODO: конструктор, геттеры и сеттеры
+
+
+
+
+
 
     public static List<Employee> employeeGenerator(int num) {
         // метод для создания списка объектов класса Employee
@@ -58,8 +63,14 @@ public class Employee {
 
         // добавление num объектов Employee в список (employees)
         for (int i = 0; i < num; i++) {
-           // employees.add(new Employee(   )); // TODO: объекты создавать с рандомными значениями. Возраст от 21 до 60 и не забудьте про зп
+            employees.add(new Employee();
+            // TODO: объекты создавать с рандомными значениями. Возраст от 21 до 60 и не забудьте про зп
         }
         return employees;
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return 0;
     }
 }

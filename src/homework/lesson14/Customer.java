@@ -1,5 +1,7 @@
 package homework.lesson14;
 
+import java.util.Objects;
+
 public class Customer {
     private String name;
     private String uuid;
@@ -10,6 +12,8 @@ public class Customer {
         this.uuid = uuid;
         this.age = age;
     }
+
+
 
     public String getName() {
         return name;
@@ -36,4 +40,16 @@ public class Customer {
     }
 
     // TODO: переопределить все необходимые методы
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Customer)) return false;
+        Customer customer = (Customer) o;
+        return age == customer.age && Objects.equals(name, customer.name) && Objects.equals(uuid, customer.uuid);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, uuid, age);
+    }
 }

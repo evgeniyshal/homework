@@ -24,6 +24,7 @@ public class Main {
         fitnessClub.membershipCheck(membership2, "pool");
         fitnessClub.membershipCheck(membership3, "group");
 
+        System.out.println();
     }
 }
 /*Задача «Фитнес»
