@@ -1,6 +1,7 @@
 package homework.lesson16;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -19,6 +20,8 @@ public class Pupil {
         this.name = name;
         this.gender = gender;
         this.birth = birth;
+
+       
     }
 
     public UUID getNumber() {
@@ -52,8 +55,6 @@ public class Pupil {
     public void setBirth(LocalDate birth) {
         this.birth = birth;
     }
-    // TODO: добавить все необходимые методы
-
 
     @Override
     public boolean equals(Object o) {
