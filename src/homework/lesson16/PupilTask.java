@@ -77,10 +77,10 @@ public class PupilTask {
 
 
         // 9. Собрать в список всех учеников с именем = someName
-        String name = "Саша";
+       String name = "Саша";
        List<Pupil> listMap = pupils.stream()
                 .filter(pupil -> name.equals(pupil.getName()))
-                        .collect(Collectors.toList());
+                        .collect(Collectors.toList())
 
 
         // 10. Собрать Map<Pupil.Gender, Integer>, где Pupil.Gender - пол, Integer - суммарный возраст учеников данного
@@ -93,5 +93,4 @@ public class PupilTask {
                 .collect(Collectors
                         .groupingBy(Pupil::getGender, Collectors.summingInt
                                 (LocalDate.now().getYear() - pupil.getBirth().getYear()));
-
 

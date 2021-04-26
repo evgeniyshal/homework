@@ -1,5 +1,6 @@
 package homework.lesson14;
 import java.util.*;
+import java.util.Map;
 public class MapTask {
     public static void main(String[] args) {
         // TODO:: написать статический метод, который принимает на вход мапу (firstTaskMap) и город (city)
@@ -14,6 +15,7 @@ public class MapTask {
 
         String city = "Тверь";
 
+        System.out.println(loginCity(firstTaskMap, city));
 
 
         // TODO:: дан список слов (words).
@@ -66,6 +68,16 @@ public class MapTask {
                 "uncover many web sites still uncover in their infancy Various versions uncover have evolved over the years uncover sometimes by accident" +
                 " sometimes on purpose injected humour and the like";
 
+    }
+
+    public static List<String> loginCity (Map<String, String> map, String city) {
+        ArrayList<String> list = new ArrayList<>();
+        for (Map.Entry<String, String> entryCity : map.entrySet()) {
+            if (city.equals(entryCity.getValue())){
+                list.add(entryCity.getKey());
+            }
+        }
+        return list;
     }
 
 }
