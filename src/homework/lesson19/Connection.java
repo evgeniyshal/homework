@@ -11,10 +11,26 @@ public class Connection implements AutoCloseable {
 
     public Connection(Socket socket) throws Exception {
         this.socket = socket;
+        output = new ObjectOutputStream(socket.getOutputStream());
+
+        input = new ObjectInputStream(socket.getInputStream());
     }
+    public void sendMessage(SimpleMessage message) throws IOException {
+        message.setDateTime();
+        output.writeObject(message);
+        output.flush();
+    }
+
+    public SimpleMessage readMessage() throws IOException, ClassNotFoundException {
+        return (SimpleMessage) input.readObject(); // вернет тип object и приведет к (SimpleMessage)
+
+    }
+
 
     @Override
     public void close() throws Exception {
-
+        input.close();
+        output.close();
+        socket.close();
     }
 }

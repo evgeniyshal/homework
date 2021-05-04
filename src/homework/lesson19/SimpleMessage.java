@@ -48,6 +48,9 @@ import java.time.LocalDateTime;
         public static SimpleMessage getMessage(String sender, String text){
             return new SimpleMessage(sender, text);
         }
+
+        public void setDateTime() {
+        }
     }
 
 

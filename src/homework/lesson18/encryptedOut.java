@@ -4,7 +4,7 @@ import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-public class encryptedOut extends FilterOutputStream // родитель для тех кто будут обр потоки{
+public class encryptedOut extends FilterOutputStream { // родитель для тех кто будут обр потоки{
     /**
      * Creates an output stream filter built on top of the specified
      * underlying output stream.

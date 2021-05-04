@@ -1,5 +1,7 @@
 package homework.lesson19;
 
+import java.io.IOException;
+import java.net.Socket;
 import java.util.Scanner;
 
 public class Client {
@@ -19,6 +21,22 @@ public class Client {
             System.out.println("Введите команду");
         }else {
             System.out.println("Некорректная команда");
+        }
+    }
+    private void sendAndPrintMessage(SimpleMessage message) {
+        try (Connection connection = new Connection(new Socket(ip,port))) {
+            connection.sendMessage(message);
+
+            SimpleMessage fromServer = connection.readMessage();
+            System.out.println("от сервера:" + fromServer);
+
+        } catch (IOException e) { // обрыв
+            System.out.println("Ошибка отправки - получения сообщения");
+        } catch (ClassNotFoundException e) { // не собрать объект
+            System.out.println("Ошибка чтения сообщения");
+        } catch (Exception e) {
+            System.out.println("Ошибка соединения");
+
         }
     }
 }
