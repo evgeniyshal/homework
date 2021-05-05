@@ -1,3 +1,4 @@
+/*
 package homework.lesson16;
 import java.time.LocalDate;
 import java.util.*;
@@ -69,7 +70,9 @@ public class PupilTask {
                             .thenComparing(Comparator.comparing(Pupil::getName).reversed())
             );
 
-        /* 8. Вывести в консоль всех учеников в возрасте от N до M лет*/
+        */
+/* 8. Вывести в консоль всех учеников в возрасте от N до M лет*//*
+
 
         pupils.stream()
                 .filter(pupil -> pupil.getBirth().getYear() >= 8 && pupil.getBirth().getYear() <=10)
@@ -80,7 +83,7 @@ public class PupilTask {
        String name = "Саша";
        List<Pupil> listMap = pupils.stream()
                 .filter(pupil -> name.equals(pupil.getName()))
-                        .collect(Collectors.toList())
+                        .collect(Collectors.toList());
 
 
         // 10. Собрать Map<Pupil.Gender, Integer>, где Pupil.Gender - пол, Integer - суммарный возраст учеников данного
@@ -94,3 +97,4 @@ public class PupilTask {
                         .groupingBy(Pupil::getGender, Collectors.summingInt
                                 (LocalDate.now().getYear() - pupil.getBirth().getYear()));
 
+*/

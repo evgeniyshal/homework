@@ -16,7 +16,7 @@ public class Connection implements AutoCloseable {
         input = new ObjectInputStream(socket.getInputStream());
     }
     public void sendMessage(SimpleMessage message) throws IOException {
-        message.setDateTime();
+
         output.writeObject(message);
         output.flush();
     }
