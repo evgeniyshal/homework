@@ -29,7 +29,7 @@ public class Server {
             while (true) {
                 Socket newClient = serverSocket.accept();// момент установки соединения с клиентом
                 connection = new Connection(newClient);
-                SimpleMessage message = connection.readMessage();
+                SimpleMessage message = connection.receiveMessage();
 
                 senders.add(message.getSender());
 

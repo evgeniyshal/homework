@@ -22,7 +22,12 @@ public class Client {
         while (true) {
             System.out.println("Введите команду");
             String messageText = scanner.nextLine();
+            if("/exit".equals(messageText)) {
+                System.out.println("Завершение работы");
+                break;
+            }
             sendAndPrintMessage(new SimpleMessage(sender, messageText));
+
         }
     }
 
@@ -33,7 +38,8 @@ public class Client {
 
             connection.sendMessage(message);
 
-            SimpleMessage fromServer = connection.readMessage();
+            SimpleMessage fromServer = connection.receiveMessage();
+
             System.out.println("от сервера:" + fromServer.getText());
 
         } catch (IOException e) { // обрыв
