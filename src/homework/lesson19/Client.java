@@ -19,6 +19,7 @@ public class Client {
         System.out.println("Введите имя отправителя");
         String sender = scanner.nextLine();
 
+
         while (true) {
             System.out.println("Введите команду");
             String messageText = scanner.nextLine();
@@ -26,6 +27,8 @@ public class Client {
                 System.out.println("Завершение работы");
                 break;
             }
+            //TODO
+            if ("/ping".equals(messageText) || "/count".equals(messageText))
             sendAndPrintMessage(new SimpleMessage(sender, messageText));
 
         }

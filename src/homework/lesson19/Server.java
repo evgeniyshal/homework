@@ -11,9 +11,6 @@ public class Server {
     private String ip;
     private int port;
     private Connection connection;
-    private String defaultResponse = "\nДоступные команды:\n/count - узнать количество клиентов, которые подключались к серверу\n" +
-            "/ping - узнать время за которое сообщение доходит до сервера и возвращается обратно\n" +
-            "/exit - завершение программы";
     private Set<String> senders = new HashSet<>();
 
     public Server(String ip, int port) {
@@ -46,14 +43,16 @@ public class Server {
     }
 
     private String handleMessage(SimpleMessage message) {
-        String response = defaultResponse;
+        String response = "Ошибка обработки команды";
 
         if ("/ping".equals(message.getText())) {
             response = String.valueOf((LocalTime.now().getNano() - message.getTime().getNano()) / 1_000_000);
         } else if ("/count".equals(message.getText())) {
             response = String.valueOf(senders.size());
-        }
-
+        } else if ("/help".equals(message.getText()))
+            response = "\nДоступные команды:\n/count - узнать количество клиентов, которые подключались к серверу\n" +
+                    "/ping - узнать время за которое сообщение доходит до сервера и возвращается обратно\n" +
+                    "/exit - завершение программы";
         return response;
     }
 }
