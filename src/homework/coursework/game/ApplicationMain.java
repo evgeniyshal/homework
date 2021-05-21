@@ -1,6 +1,14 @@
 package homework.coursework.game;
 
-public class app {
+import java.util.Scanner;
+
+public class ApplicationMain {
+    public static void main(String[] args) {
+        System.out.println("Начать Игру");
+        Scanner scanner =new Scanner(System.in);
+
+        }
+    }
 /*    // каждый пункт меню отдельная команда
     // Загрузить игру из файла, если нет файла, то нужно сообщить
     //
