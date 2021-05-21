@@ -1,4 +1,4 @@
-package homework.coursework;
+package homework.coursework.fitness;
 
 import java.time.LocalTime;
 

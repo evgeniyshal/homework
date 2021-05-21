@@ -1,9 +1,9 @@
 package homework.coursework.game;
 
 public class StartGame implements Command{
-    private Start start;
+    private final Menu start;
 
-    public StartGame(Start start) {
+    public StartGame(Menu start) {
         this.start = start;
     }
 

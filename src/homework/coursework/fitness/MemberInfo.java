@@ -1,4 +1,4 @@
-package homework.coursework;
+package homework.coursework.fitness;
 
 
 
