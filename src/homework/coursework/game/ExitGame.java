@@ -1,15 +1,13 @@
 package homework.coursework.game;
 
-public class ExitGame implements Command{
-    private final Menu exit;
+public class ExitGame extends Command{
 
-    public ExitGame(Menu exit) {
-        this.exit = exit;
+    public ExitGame(Menu menu) {
+        super(menu);
     }
-
 
     @Override
     public void execute() {
-        exit.exitGame();
+        getMenu().exitGame();
     }
 }

@@ -14,8 +14,9 @@ public class Hw {
     }
 
     public static Properties getProperties(String fileName) {
+        Properties properties = new Properties();
         try (InputStream input = Hw.class.getClassLoader().getResourceAsStream(fileName)) {
-            properies.load(input);
+            properties.load(input);
         } catch (IOException e) {
             System.out.println("Файл не удалось прочитать");
             throw new RuntimeException();

@@ -1,16 +1,14 @@
 package homework.coursework.game;
 
-public class LoadGame implements Command {
-    private final Menu load;
+public class LoadGame extends Command {
 
-    public LoadGame(Menu load) {
-        this.load = load;
+    public LoadGame(Menu menu) {
+        super(menu);
     }
-
 
     @Override
     public void execute() {
-        load.loadGame();
+        getMenu().loadGame();
     }
 }
 

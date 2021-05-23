@@ -1,14 +1,13 @@
 package homework.coursework.game;
 
-public class StartGame implements Command{
-    private final Menu start;
+public class StartGame extends Command{
 
-    public StartGame(Menu start) {
-        this.start = start;
+    public StartGame(Menu menu) {
+        super(menu);
     }
 
     @Override
     public void execute() {
-        start.startGame();
+        getMenu().startGame();
     }
 }

@@ -3,10 +3,24 @@ package homework.coursework.game;
 import java.util.Scanner;
 
 public class ApplicationMain {
-    public static void main(String[] args) {
-        System.out.println("Начать Игру");
-        Scanner scanner =new Scanner(System.in);
+    private static final Menu menu = new Menu();
 
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String input;
+        menu.showMenu();
+
+        while (true) {
+            input = scanner.nextLine();
+            if ("1".equals(input)) {
+                executeCommand(new StartGame(menu));
+            }
+        }
+    }
+
+    private static void executeCommand(Command command) {
+        command.execute();
         }
     }
 /*    // каждый пункт меню отдельная команда
@@ -35,4 +49,3 @@ public class ApplicationMain {
 Параграфы-узлы в файле 'узлы-и-переходы.png'
 Названия, текст параграфов-узлов и варианты ответов в файле 'текст-параграфов.md'
     */
-}

@@ -1,5 +1,15 @@
 package homework.coursework.game;
 
-public interface Command {
-    void execute();
+public abstract class Command {
+    private Menu menu;
+
+    public Command(Menu menu) {
+        this.menu = menu;
+    }
+
+    public Menu getMenu() {
+        return menu;
+    }
+
+    abstract void execute();
 }
