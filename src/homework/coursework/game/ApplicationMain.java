@@ -15,11 +15,10 @@ public class ApplicationMain {
             input = scanner.nextLine();
             if ("1".equals(input)) {
                 executeCommand(new StartGame(menu));
-            } else if ("2".equals(input)) {
-                executeCommand(new LoadGame(menu));
-            } else
+            }
         }
     }
+
 
     private static void executeCommand(Command command) {
         command.execute();
