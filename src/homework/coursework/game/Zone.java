@@ -1,0 +1,5 @@
+package homework.coursework.game;
+
+public enum Zone {
+    HOME,QUEST,DWELLERS,SINGLESEARCH,OWLHOME,WOLFHOME,FORREST,HONEY,BEERETREAT,REST,HONEYFORBEAR.
+    }

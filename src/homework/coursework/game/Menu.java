@@ -7,7 +7,7 @@ public class Menu {
     }
 
     public void loadGame(){
-
+        System.out.println();
     }
 
     public void exitGame(){
