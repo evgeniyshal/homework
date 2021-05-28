@@ -5,7 +5,6 @@ public class Menu {
 
     public void startGame(){
         System.out.println("Игра началась");
-
     }
 
     public void loadGame(){

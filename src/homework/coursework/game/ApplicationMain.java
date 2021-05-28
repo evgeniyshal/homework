@@ -13,7 +13,6 @@ public class ApplicationMain {
             input = scanner.nextLine();
             if ("1".equals(input)) {
                 executeCommand(new StartGame(menu));
-
             } else if ("2".equals(input)) {
                 executeCommand(new LoadGame(menu));
             } else if ("3".equals(input)) {

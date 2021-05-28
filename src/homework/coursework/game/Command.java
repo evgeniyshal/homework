@@ -1,6 +1,8 @@
 package homework.coursework.game;
 
-public abstract class Command {
+import javax.xml.stream.Location;
+
+public class Command {
     private Menu menu;
 
     public Command(Menu menu) {
@@ -11,5 +13,7 @@ public abstract class Command {
         return menu;
     }
 
-    abstract void execute();
+    void execute() {
+
+    }
 }
