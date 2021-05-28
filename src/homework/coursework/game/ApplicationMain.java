@@ -3,8 +3,6 @@ package homework.coursework.game;
 import java.util.Scanner;
 
 public class ApplicationMain {
-    private static final Menu menu = new Menu();
-
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -15,14 +13,31 @@ public class ApplicationMain {
             input = scanner.nextLine();
             if ("1".equals(input)) {
                 executeCommand(new StartGame(menu));
+
+            } else if ("2".equals(input)) {
+                executeCommand(new LoadGame(menu));
+            } else if ("3".equals(input)) {
+                executeCommand(new ExitGame(menu));
+                break;
             }
         }
+
+
     }
 
 
     private static void executeCommand(Command command) {
         command.execute();
         }
+
+        private static final Menu menu = new Menu();
+
+
+
+
+
+
+
     }
 /*    // каждый пункт меню отдельная команда
     // Загрузить игру из файла, если нет файла, то нужно сообщить

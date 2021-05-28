@@ -2,8 +2,10 @@ package homework.coursework.game;
 
 public class Menu {
 
+
     public void startGame(){
         System.out.println("Игра началась");
+
     }
 
     public void loadGame(){
@@ -11,7 +13,7 @@ public class Menu {
     }
 
     public void exitGame(){
-
+        System.out.println("Вы вышли из игры");
     }
 
     public void showMenu(){
