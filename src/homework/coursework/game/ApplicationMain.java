@@ -1,8 +1,11 @@
 package homework.coursework.game;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class ApplicationMain {
+
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
