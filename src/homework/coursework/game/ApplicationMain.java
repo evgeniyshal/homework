@@ -16,8 +16,10 @@ public class ApplicationMain {
             input = scanner.nextLine();
             if ("1".equals(input)) {
                 executeCommand(new StartGame(menu));
+                executeCommand(menu.startGame);
             } else if ("2".equals(input)) {
                 executeCommand(new LoadGame(menu));
+                executeCommand(menu.loadGame);
             } else if ("3".equals(input)) {
                 executeCommand(new ExitGame(menu));
                 break;
