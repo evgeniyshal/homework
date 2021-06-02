@@ -18,6 +18,10 @@ public class Menu {
         this.listCommand = listCommand;
     }
 
+    public static Object getSaveGameLocation() {
+        return null;
+    }
+
     public void startGame(){
         System.out.println("Игра началась");
         listCommand.add(startGame);
