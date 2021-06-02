@@ -4,7 +4,9 @@ import java.util.List;
 
 public class Menu {
     private List<Command> listCommand;
-
+    StartGame startGame = new StartGame();
+    LoadGame loadGame = new LoadGame();
+    ExitGame exitGame = new ExitGame();
     public Menu() {
     }
     //TODO
@@ -18,21 +20,21 @@ public class Menu {
 
     public void startGame(){
         System.out.println("Игра началась");
-        listCommand.add();
+        listCommand.add(startGame);
     }
 
     public void loadGame(){
         System.out.println("Загрузка игры");
-        listCommand.add();
+        listCommand.add(loadGame);
     }
 
     public void exitGame(){
         System.out.println("Вы вышли из игры");
-        listCommand.add();
+        listCommand.add(exitGame);
     }
 
     public void showMenu(){
         System.out.println("1. Начать игру\n2. Загрузить игру\n3. Выйти");
-        listCommand.add();
+
     }
 }

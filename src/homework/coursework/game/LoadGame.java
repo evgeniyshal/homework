@@ -6,6 +6,10 @@ public class LoadGame extends Command {
         super(menu);
     }
 
+    public LoadGame() {
+
+    }
+
     @Override
     public void execute() {
         getMenu().loadGame();

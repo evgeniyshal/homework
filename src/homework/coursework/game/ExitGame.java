@@ -6,6 +6,10 @@ public class ExitGame extends Command{
         super(menu);
     }
 
+    public ExitGame() {
+
+    }
+
     @Override
     public void execute() {
         getMenu().exitGame();

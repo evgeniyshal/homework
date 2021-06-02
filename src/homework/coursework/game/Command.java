@@ -9,6 +9,10 @@ public class Command {
         this.menu = menu;
     }
 
+    public Command() {
+
+    }
+
     public Menu getMenu() {
         return menu;
     }

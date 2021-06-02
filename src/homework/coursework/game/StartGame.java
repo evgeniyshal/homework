@@ -6,6 +6,10 @@ public class StartGame extends Command{
         super(menu);
     }
 
+    public StartGame() {
+        super();
+    }
+
     @Override
     public void execute() {
         getMenu().startGame();
