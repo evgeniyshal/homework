@@ -12,6 +12,6 @@ public class ExitGame extends Command{
 
     @Override
     public void execute() {
-        getMenu().exitGame();
+        getMenu().addCommand();
     }
 }

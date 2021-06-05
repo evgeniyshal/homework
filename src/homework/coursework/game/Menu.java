@@ -9,33 +9,19 @@ public class Menu {
     ExitGame exitGame = new ExitGame();
     public Menu() {
     }
-    //TODO
-    // Не понимаю, как сделать реализацию? Создать объекты команд?
-    // Объекты создавать в Menu или в Main?
-    // Добавлять их в список в реализацию методов?
+
 
     public Menu(List<Command> listCommand) {
         this.listCommand = listCommand;
     }
 
-    public static Object getSaveGameLocation() {
-        return null;
-    }
 
-    public void startGame(){
-        System.out.println("Игра началась");
+    public void addCommand(){
         listCommand.add(startGame);
-    }
-
-    public void loadGame(){
-        System.out.println("Загрузка игры");
         listCommand.add(loadGame);
-    }
-
-    public void exitGame(){
-        System.out.println("Вы вышли из игры");
         listCommand.add(exitGame);
     }
+
 
     public void showMenu(){
         System.out.println("1. Начать игру\n2. Загрузить игру\n3. Выйти");

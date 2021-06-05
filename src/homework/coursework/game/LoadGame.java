@@ -12,7 +12,7 @@ public class LoadGame extends Command {
 
     @Override
     public void execute() {
-        getMenu().loadGame();
+        getMenu().addCommand();
     }
 }
 

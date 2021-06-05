@@ -12,6 +12,6 @@ public class StartGame extends Command{
 
     @Override
     public void execute() {
-        getMenu().startGame();
+
     }
 }
