@@ -7,7 +7,6 @@ public class LoadGame extends Command {
     }
 
     public LoadGame() {
-
     }
 
     @Override

@@ -3,7 +3,8 @@ package homework.coursework.game;
 import javax.xml.stream.Location;
 
 public class Command {
-    private Menu menu;
+    
+    private Menu menu; // переменная меню
 
     public Command(Menu menu) {
         this.menu = menu;

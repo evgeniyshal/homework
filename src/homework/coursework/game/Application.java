@@ -2,30 +2,27 @@ package homework.coursework.game;
 
 import java.util.LinkedList;
 import java.util.Scanner;
-
-
-
-
 public class Application {
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         String input;
-        menu.showMenu();
+
+        Menu menu = new Menu();
 
         while (true) {
             input = scanner.nextLine();
             if ("1".equals(input)) {
-                executeCommand(new StartGame(menu));
-
+             menu.getListCommand().get(0).execute();
 
             } else if ("2".equals(input)) {
-                executeCommand(new LoadGame(menu));
+                menu.getListCommand().get(1).execute();
 
             } else if ("3".equals(input)) {
-                executeCommand(new ExitGame(menu));
+                menu.getListCommand().get(2).execute();
                 break;
+
             }
         }
 
@@ -36,15 +33,6 @@ public class Application {
     private static void executeCommand(Command command) {
         command.execute();
         }
-
-        private static final Menu menu = new Menu();
-
-
-
-
-
-
-
     }
 /*    // каждый пункт меню отдельная команда
     // Загрузить игру из файла, если нет файла, то нужно сообщить

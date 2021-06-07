@@ -14,6 +14,7 @@ public class SaveGame extends Command {
         File file = new File("SaveGame/save");
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file))) {
 
+
         } catch (IOException e) {
             e.printStackTrace();
         }
