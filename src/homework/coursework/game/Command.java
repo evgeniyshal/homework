@@ -1,24 +1,25 @@
 package homework.coursework.game;
 
-import javax.xml.stream.Location;
-
 public class Command {
-    
-    private Menu menu; // переменная меню
 
-    public Command(Menu menu) {
-        this.menu = menu;
+    private Game game; // переменная меню
+
+    public Command(Game game) {
+        this.game = game;
     }
 
     public Command() {
 
     }
 
-    public Menu getMenu() {
-        return menu;
+    public Game getGame() {
+        return game;
     }
 
     void execute() {
 
+    }
+    public void printText () {
+        System.out.println(getGame().getCurrentLocation().getText());
     }
 }

@@ -1,35 +1,28 @@
 package homework.coursework.game;
 
-import java.util.LinkedList;
 import java.util.Scanner;
 public class Application {
 
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         String input;
+        Game game = new Game();
 
-        Menu menu = new Menu();
-
+        System.out.println(game.getCurrentLocation().getText());
         while (true) {
             input = scanner.nextLine();
             if ("1".equals(input)) {
-             menu.getListCommand().get(0).execute();
+             game.getListCommand().get(0).execute();
 
             } else if ("2".equals(input)) {
-                menu.getListCommand().get(1).execute();
+                game.getListCommand().get(1).execute();
 
             } else if ("3".equals(input)) {
-                menu.getListCommand().get(2).execute();
+                game.getListCommand().get(2).execute();
                 break;
-
             }
         }
-
-
     }
-
-
     private static void executeCommand(Command command) {
         command.execute();
         }

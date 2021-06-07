@@ -1,13 +1,12 @@
 package homework.coursework.game;
 
-public class ExitGame extends Command{
+public class SecondCommand extends Command {
 
-    public ExitGame(Game game) {
+    public SecondCommand(Game game) {
         super(game);
     }
 
-    public ExitGame() {
-
+    public SecondCommand() {
     }
 
     @Override
@@ -15,3 +14,4 @@ public class ExitGame extends Command{
 
     }
 }
+

@@ -5,9 +5,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-public class SaveGame extends Command {
-    public SaveGame(Menu menu) {
-        super(menu);
+public class ThirdCommand extends Command {
+    public ThirdCommand(Game game) {
+        super(game);
     }
 
     private void saveGame() {
@@ -22,6 +22,9 @@ public class SaveGame extends Command {
 
     @Override
     void execute() {
-        getMenu().addCommand();
+        if (!getGame().getCurrentLocation().equals(Zone.MENU)){ // Выход в меню из всех зон которые не являются меню
+            getGame().setCurrentLocation(Zone.MENU);
+            printText();
+        }
     }
 }
