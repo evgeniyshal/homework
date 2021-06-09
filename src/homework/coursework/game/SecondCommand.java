@@ -30,7 +30,31 @@ public class SecondCommand extends Command {
                 break;
             case DWELLERS:
                 getGame().setCurrentLocation(Zone.WOLFHOME);
+                printText();
                 break;
+            case WOLFHOME:
+                getGame().setCurrentLocation(Zone.SINGLESEARCH);
+                printText();
+                break;
+            case FORREST:
+                getGame().setCurrentLocation(Zone.HONEY);
+                printText();
+                break;
+            case HONEY:
+                getGame().setCurrentLocation(Zone.STOLENHONEY);
+                printText();
+                break;
+            case BEERETREAT:
+                getGame().setCurrentLocation(Zone.HONEYFORBEAR);
+                printText();
+                break;
+            case HONEYFORBEAR:
+                getGame().setCurrentLocation(Zone.HOME);
+                printText();
+                break;
+
+
+
 
         }
     }
