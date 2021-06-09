@@ -21,6 +21,16 @@ public class FirstCommand extends Command{
                 getGame().setCurrentLocation(Zone.HOME);
                 printText();
                 break;
+            case IN_SEARCH:
+                getGame().setCurrentLocation(Zone.DWELLERS);
+                printText();
+                break;
+            case DWELLERS:
+                getGame().setCurrentLocation(Zone.OWLHOME);
+                break;
+            case OWLHOME:
+                getGame().setCurrentLocation(Zone.FORREST);
+                break;
         }
     }
 }
