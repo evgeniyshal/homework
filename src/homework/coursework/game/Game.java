@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Game {
     private Zone currentLocation = Zone.MENU;
+    private Zone saveGameLocation;
 
     private List<Command> listCommand = new ArrayList<>();
 
@@ -44,5 +45,13 @@ public class Game {
     }
     public Zone getCurrentLocation() {
         return currentLocation;
+    }
+
+    public Zone getSaveGameLocation() {
+        return saveGameLocation;
+    }
+
+    public void setSaveGameLocation(Zone saveGameLocation) {
+        this.saveGameLocation = saveGameLocation;
     }
 }
