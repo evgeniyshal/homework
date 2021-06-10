@@ -1,8 +1,8 @@
 package homework.coursework.game;
 
-public class Command {
+public abstract class Command {
 
-    private Game game; // переменная меню
+    Game game; // переменная меню
 
     public Command(Game game) {
         this.game = game;
@@ -23,7 +23,9 @@ public class Command {
     void execute() {
 
     }
-    public void printText () {
+
+    public void printText() {
         System.out.println(getGame().getCurrentLocation().getText());
     }
 }
+
