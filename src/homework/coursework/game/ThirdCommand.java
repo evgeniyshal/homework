@@ -10,20 +10,12 @@ public class ThirdCommand extends Command {
         super(game);
     }
 
-    private void saveGame() {
-        File file = new File("SaveGame/save");
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file))) {
-            out.writeObject(getGame().getSaveGameLocation());
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     @Override
     void execute() {
-        if (!getGame().getCurrentLocation().equals(Zone.MENU)){ // Выход в меню из всех зон которые не являются меню
-            getGame().setCurrentLocation(Zone.MENU);
+        if (!getGame().getCurrentLocation().equals(Zone.MENU)){
+            getGame().setCurrentLocation(Zone.GAME_MENU);
             printText();
         }
     }

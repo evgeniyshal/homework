@@ -37,6 +37,10 @@ public class FirstCommand extends Command{
                 getGame().setCurrentLocation(Zone.SINGLESEARCH);
                 printText();
                 break;
+            case SINGLESEARCH:
+                getGame().setCurrentLocation(Zone.START_MENU);
+                printText();
+                break;
             case WOLFHOME:
                getGame().setCurrentLocation(Zone.HOME);
                printText();

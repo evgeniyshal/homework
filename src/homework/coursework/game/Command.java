@@ -2,14 +2,13 @@ package homework.coursework.game;
 
 public abstract class Command {
 
-    Game game; // переменная меню
+    Game game;
 
     public Command(Game game) {
         this.game = game;
     }
 
     public Command() {
-
     }
 
     public void setGame(Game game) {
@@ -21,7 +20,6 @@ public abstract class Command {
     }
 
     void execute() {
-
     }
 
     public void printText() {
