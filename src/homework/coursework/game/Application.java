@@ -19,7 +19,9 @@ public class Application {
 
             } else if ("3".equals(input)) {
                 game.getListCommand().get(2).execute();
-                break;
+
+            } else  if ("4".equals(input)) {
+                game.getListCommand().get(3).execute();
             }
         }
     }

@@ -13,7 +13,7 @@ public class FourCommand extends Command {
     private void saveGame() {
         File file = new File("SaveGame/save");
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file))) {
-            out.writeObject(getGame().getSaveGameLocation());
+            out.writeObject(game.getSaveGameLocation());
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -21,11 +21,9 @@ public class FourCommand extends Command {
     }
     @Override
     public void execute() {
-        if (game.getCurrentLocation() != Zone.MENU) {
-            game.setSaveGameLocation(game.getCurrentLocation());
-            game.setCurrentLocation(Zone.MENU);
-            Zone.MENU.setText("1. Начать игру\n2. Загрузить игру\n3. Выйти\n4. Сохранить игру");
-
+         switch (game.getCurrentLocation()) {
+            case MENU:
+                saveGame();
 
         }
     }

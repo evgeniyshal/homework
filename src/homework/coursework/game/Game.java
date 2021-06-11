@@ -12,12 +12,14 @@ public class Game {
     private FirstCommand first;
     private SecondCommand second;
     private ThirdCommand third;
+    private FourCommand four;
 
     public Game() {
 
         first = new FirstCommand(this);
         second = new SecondCommand(this);
         third = new ThirdCommand(this);
+        four = new FourCommand(this);
         addCommand();
 
     }
@@ -33,6 +35,7 @@ public class Game {
         listCommand.add(first);
         listCommand.add(second);
         listCommand.add(third);
+        listCommand.add(four);
     }
 
     public void setCurrentLocation(Zone currentLocation) {
