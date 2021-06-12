@@ -1,5 +1,10 @@
 package homework.coursework.game;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
 public class SecondCommand extends Command {
 
     public SecondCommand(Game game) {
@@ -12,8 +17,8 @@ public class SecondCommand extends Command {
     @Override
     public void execute() {
         switch (getGame().getCurrentLocation()) {
-            case MENU:
-                getGame().setCurrentLocation(Zone.NEAR_FOX_HOME);
+            case START_MENU:
+                loadGame();
                 printText();
                 break;
             case NEAR_FOX_HOME:
@@ -25,7 +30,7 @@ public class SecondCommand extends Command {
                 printText();
                 break;
             case SINGLESEARCH:
-                getGame().setCurrentLocation(Zone.MENU);
+                getGame().setCurrentLocation(Zone.START_MENU);
                 printText();
                 break;
             case DWELLERS:
@@ -56,6 +61,14 @@ public class SecondCommand extends Command {
 
 
 
+        }
+    }
+    public void loadGame(){
+        File file = new File("SaveGame/save");
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
+            game.setCurrentLocation((Zone) in.readObject());
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Файл не найден");
         }
     }
 }

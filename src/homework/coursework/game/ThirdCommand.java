@@ -12,8 +12,8 @@ public class ThirdCommand extends Command {
 
     @Override
     void execute() {
-        getGame().setSaveGameLocation(Zone.HOME);
-        if (!getGame().getCurrentLocation().equals(Zone.MENU)){
+
+        if (!getGame().getCurrentLocation().equals(Zone.START_MENU)){
 
             getGame().setCurrentLocation(Zone.GAME_MENU);
             printText();

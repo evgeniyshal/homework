@@ -13,7 +13,7 @@ public class FirstCommand extends Command{
     @Override
     public void execute() {
         switch (getGame().getCurrentLocation()) {
-            case MENU:
+            case START_MENU:
                 getGame().setCurrentLocation(Zone.NEAR_FOX_HOME);
                 printText();
                 break;
