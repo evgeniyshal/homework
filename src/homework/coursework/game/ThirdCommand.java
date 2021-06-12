@@ -10,11 +10,6 @@ public class ThirdCommand extends Command {
         super(game);
     }
 
-    @Override
-    void execute() {
-        if (!getGame().getCurrentLocation().equals(Zone.MENU)){
-            getGame().setCurrentLocation(Zone.GAME_MENU);
-            printText();
-        }
+
     }
 }
