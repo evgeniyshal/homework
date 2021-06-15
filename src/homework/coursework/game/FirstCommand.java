@@ -6,10 +6,6 @@ public class FirstCommand extends Command{
         super(game);
     }
 
-    public FirstCommand() {
-        super();
-    }
-
     @Override
     public void execute() {
         switch (getGame().getCurrentLocation()) {
@@ -58,8 +54,6 @@ public class FirstCommand extends Command{
                 getGame().setCurrentLocation(Zone.SINGLESEARCH);
                 printText();
                 break;
-
-
         }
     }
 }

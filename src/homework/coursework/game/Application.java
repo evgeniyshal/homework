@@ -12,7 +12,7 @@ public class Application {
         while (!game.isGameOver()) {
             input = scanner.nextLine();
             if ("1".equals(input)) {
-             game.getListCommand().get(0).execute();
+                game.getListCommand().get(0).execute();
 
             } else if ("2".equals(input)) {
                 game.getListCommand().get(1).execute();
@@ -20,12 +20,10 @@ public class Application {
             } else if ("3".equals(input)) {
                 game.getListCommand().get(2).execute();
 
-            } else  if ("4".equals(input)) {
+            } else if ("4".equals(input)) {
                 game.getListCommand().get(3).execute();
             }
         }
     }
-    private static void executeCommand(Command command) {
-        command.execute();
-        }
-    }
+}
+

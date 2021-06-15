@@ -6,12 +6,9 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 
 public class SecondCommand extends Command {
-
     public SecondCommand(Game game) {
         super(game);
     }
-
-
     @Override
     public void execute() {
         switch (getGame().getCurrentLocation()) {
@@ -55,10 +52,6 @@ public class SecondCommand extends Command {
                 getGame().setCurrentLocation(Zone.HOME);
                 printText();
                 break;
-
-
-
-
         }
     }
     public void loadGame(){
