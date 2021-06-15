@@ -11,8 +11,6 @@ public class SecondCommand extends Command {
         super(game);
     }
 
-    public SecondCommand() {
-    }
 
     @Override
     public void execute() {
@@ -64,9 +62,11 @@ public class SecondCommand extends Command {
         }
     }
     public void loadGame(){
-        File file = new File("SaveGame/save");
+        File file = new File("SaveGame/save.txt");
+
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
             game.setCurrentLocation((Zone) in.readObject());
+
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Файл не найден");
         }

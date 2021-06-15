@@ -15,6 +15,7 @@ public class FirstCommand extends Command{
         switch (getGame().getCurrentLocation()) {
             case START_MENU:
                 getGame().setCurrentLocation(Zone.NEAR_FOX_HOME);
+
                 printText();
                 break;
             case NEAR_FOX_HOME:

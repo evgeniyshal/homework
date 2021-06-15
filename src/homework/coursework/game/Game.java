@@ -4,8 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
-    private Zone currentLocation = Zone.MENU;
+    private Zone currentLocation = Zone.START_MENU;
     private Zone saveGameLocation;
+    private boolean gameOver;
+
+    public boolean isGameOver() {
+        return gameOver;
+    }
+
+    public void setGameOver(boolean gameOver) {
+        this.gameOver = gameOver;
+    }
 
     private List<Command> listCommand = new ArrayList<>();
 
