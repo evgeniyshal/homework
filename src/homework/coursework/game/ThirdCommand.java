@@ -7,7 +7,8 @@ public class ThirdCommand extends Command {
 
     @Override
     void execute() {
-        if (!getGame().getCurrentLocation().equals(Zone.START_MENU)|| getGame().getCurrentLocation().equals(Zone.GAME_MENU)){
+        if (!getGame().getCurrentLocation().equals(Zone.START_MENU)|| !getGame().getCurrentLocation().equals(Zone.GAME_MENU)){
+            getGame().setSaveGameLocation(getGame().getCurrentLocation());
             getGame().setCurrentLocation(Zone.GAME_MENU);
             printText();
         } else if (getGame().getCurrentLocation() == Zone.START_MENU
